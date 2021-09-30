@@ -1,0 +1,14 @@
+<resource>
+	    <style name="Dialog_Fullscreen">
+	        <item name="colorPrimary">@android:color/white</item>
+	        <item name="colorPrimaryDark">@android:color/white</item>
+	        <item name="android:windowFullscreen">false</item>
+	        <item name="android:windowNoTitle">false</item>
+	        <item name="android:windowCloseOnTouchOutside">true</item>
+	    </style>
+	    
+	    <style name="DialogBottom">
+	        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+	        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+	    </style>
+</resource>
