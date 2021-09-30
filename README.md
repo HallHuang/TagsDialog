@@ -12,7 +12,26 @@
   
 ## 2. 基本使用方法：
 
-  (1)在某个Activity/Fragment中，通过点击事件触发TagsDialog以动画形式显示：
+   (1)在TagsDialog自定义视图中，加载easytagdragview功能包中的自定义视图Easytagdragview作为主视图
+   ```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.XXX.easytagdragview.EasyTipDragView
+        android:id="@+id/easy_tip_drag_view"
+        android:background="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+   ```
+   
+  (2)在某个Activity/Fragment中，通过点击事件触发TagsDialog以动画形式显示：
   
   ```
   @Override
@@ -32,7 +51,7 @@
             });
             break;
 ```
-  (2) 在TagsDialog中进行主题标签的数据载入、事件响应处理
+  (3) 在TagsDialog中进行主题标签的数据载入、事件响应处理
   
 ```
 //下部
