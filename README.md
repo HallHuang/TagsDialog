@@ -8,7 +8,9 @@
   标签选择视图功能模块：easytagdragview
   
 2.基本使用发法：
+
 在某个Activity/Fragment中，通过点击事件触发TagsDialog以动画形式显示：
+
 @Override
 public void onClick(View v) {
   switch (v.getId()){
@@ -16,7 +18,7 @@ public void onClick(View v) {
           TagsDialog tagsDialog=new TagsDialog(getContext());
           tagsDialog.show();
           backView.setVisibility(View.VISIBLE);
-
+          
           //数据和视图刷新;片段的定位跳转
           tagsDialog.setOnDismissListener(new TagsDialog.OnDismissListener() {
               @Override
