@@ -3,9 +3,8 @@
 
 ## 1. 文件组成：
   自定义视图：TagsDialog.java;  
-  辅助XML: style.xml（主题，name="Dialog_Fullscreen"；进入/离开动画 name="DialogBottom"）, 
-          dialog_tag_select.xml
-  标签选择视图功能模块: easytagdragview
+  辅助XML: style.xml（主题，name="Dialog_Fullscreen";进入/离开动画 name="DialogBottom"), dialog_tag_select.xml(主视图);  
+  标签选择视图功能模块: easytagdragview;  
   
 ## 2. 基本使用发法：
 
