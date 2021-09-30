@@ -61,7 +61,7 @@ easyTipDragView.setSelectedListener(new TipItemView.OnSelectedListener() {
       }
   });
 
-  //删除或排序
+  //拖拉标签完成后的数据刷新回调
   easyTipDragView.setDataResultCallback(new EasyTipDragView.OnDataChangeResultCallback() {
       @Override
       public void onDataChangeResult(ArrayList<Tip> tips) {
@@ -71,7 +71,7 @@ easyTipDragView.setSelectedListener(new TipItemView.OnSelectedListener() {
       }
   });
 
-  //下栏点击添加进上栏
+  //点击"完成"按钮对修改后的数据进行传递，并关闭该dialog
   easyTipDragView.setOnCompleteCallback(new EasyTipDragView.OnCompleteCallback() {
       @Override
       public void onComplete(ArrayList<Tip> tips) {
