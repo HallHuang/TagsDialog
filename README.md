@@ -8,7 +8,7 @@
   
 ## 2. 基本使用方法：
 
-  在某个Activity/Fragment中，通过点击事件触发TagsDialog以动画形式显示：
+  (1)在某个Activity/Fragment中，通过点击事件触发TagsDialog以动画形式显示：
   
   ```
   @Override
@@ -27,4 +27,54 @@
                 }
             });
             break;
+```
+  (2) 在TagsDialog中进行主题标签的数据载入、事件响应处理
+  
+```
+//下部
+easyTipDragView.setAddData(TagsManager.getNewsAddTips());
+//上部
+easyTipDragView.setDragData(TagsManager.getNewsDragTips());
+
+//在easyTipDragView处于非编辑模式下点击item的回调（编辑模式下点击item作用为删除item）
+easyTipDragView.setSelectedListener(new TipItemView.OnSelectedListener() {
+  @Override
+  public void onTileSelected(Tip entity, int position, View view) {
+      List<Boolean> mSelected= easyTipDragView.getDragTipAdapter().getmTextSelected();
+
+      //set(position, true) --> Data Changed --> View Changed
+          selectPosition=position;
+          for (int i=0;i<mSelected.size();i++){
+              if (i!=position){
+                  easyTipDragView.getDragTipAdapter().getmTextSelected().set(i,false);
+              }else{
+                  easyTipDragView.getDragTipAdapter().getmTextSelected().set(i,true);
+              }
+          }
+          easyTipDragView.getDragTipAdapter().notifyDataSetChanged();
+
+          dismiss();
+      }
+  });
+
+  //删除或排序
+  easyTipDragView.setDataResultCallback(new EasyTipDragView.OnDataChangeResultCallback() {
+      @Override
+      public void onDataChangeResult(ArrayList<Tip> tips) {
+          isDataChannger=true;
+          L.v( "onDataChangeResult:"+tips.toString());
+          SharePreferenceManager.putObject(getContext(),"news_tags",tips);
+      }
+  });
+
+  //下栏点击添加进上栏
+  easyTipDragView.setOnCompleteCallback(new EasyTipDragView.OnCompleteCallback() {
+      @Override
+      public void onComplete(ArrayList<Tip> tips) {
+          L.d("onComplete：" + tips.toString());
+          isDataChannger=true;
+          SharePreferenceManager.putObject(getContext(),"news_tags",tips);
+          dismiss();
+      }
+  });
 ```
