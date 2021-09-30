@@ -1,7 +1,7 @@
 # TagsDialog
 顶部导航最右侧标签选择跳窗，可进行拖动排序、删除等
 
-![tag11.jpg](https://i.loli.net/2021/09/30/Ki4R7dj63aDuwZ2.jpg)
+![tag11.jpg](http://zuohaotu.com/Download/202183023537872tag2.jpg)      ![tag11.jpg](http://zuohaotu.com/Download/2021830235110203tag11.jpg)![tag11.jpg](http://h9.zuohaotu.com/Download/202183023589674tag3.jpg)
 
 ## 1. 文件组成：
 <img src="https://i.loli.net/2021/09/30/6QsVg19cnuhxbAE.png" width="400">
