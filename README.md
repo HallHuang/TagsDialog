@@ -1,10 +1,14 @@
 # TagsDialog
 顶部导航最右侧标签选择跳窗，可进行拖动排序、删除等
 
+![tag11.jpg](https://i.loli.net/2021/09/30/Ki4R7dj63aDuwZ2.jpg)
+
 ## 1. 文件组成：
-  自定义视图：TagsDialog.java;  
-  辅助XML: style.xml（主题，name="Dialog_Fullscreen";进入/离开动画 name="DialogBottom"), dialog_tag_select.xml(主视图);  
-  标签选择视图功能模块: easytagdragview;  
+<img src="https://i.loli.net/2021/09/30/6QsVg19cnuhxbAE.png" width="400">
+自定义视图：TagsDialog.java;   
+
+辅助XML: style.xml（主题，name="Dialog_Fullscreen";进入/离开动画 name="DialogBottom"), dialog_tag_select.xml(主视图);  
+标签选择视图功能模块: easytagdragview;  
   
 ## 2. 基本使用方法：
 
